@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main_list {
+            list-style-type: none;
+        }
+        img {
+            height: 500px;
+            width: 337px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>
+        My Book List
+    </h1>
+    <ul class="main_list">
+
+    </ul>
+
+
+
+    <script>
+        const books = [{ title: 'The Design of EveryDay Things', author: 'Don Norman', alreadyRead: false, img: './Imgs/book1.jpg'}, { title: 'The Most Human Human', author: 'Brian Christian', alreadyRead: true, img: './Imgs/book2.jpg'}];
+        for ( let i = 0; i < books.length; i++ ) {
+        let li = document.createElement('li'), p = document.createElement('p'), img = document.createElement('img');
+        p.innerText = `${books[i].title} written by ${books[i].author}`;
+        img.src = books[i].img;
+        li.append(img, p);
+        document.querySelector('.main_list').append(li);}
+    </script>
+</body>
+</html>

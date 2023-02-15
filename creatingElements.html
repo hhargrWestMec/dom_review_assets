@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating Elements in the DOM using JS</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .main_list {
+            list-style-type: none;
+            display: grid;
+            grid-template-columns: auto auto auto;
+            text-align: center;
+        }
+
+        img {
+            width: 400px;
+            height: 400px;
+        }
+
+        p {
+            font-size: 2em;
+        }
+
+    </style>
+</head>
+<body>
+
+    <ul class="main_list">
+
+    </ul>
+
+    <script>
+        const array = ['./Imgs/ada_lovelace.jpg', './Imgs/alan_turing.jpg', './Imgs/charles_babbage.jpg', './Imgs/steve_jobs.jpg', './Imgs/bill_gates.jpg', './Imgs/elon_musk.jpg', 'Ada Lovelace', 'Alan Turing', 'Charles Babbage', 'Steve Jobs', 'Bill Gates', 'Elon Musk'];
+        array.forEach((ele, i, arr) => {
+            let li = document.createElement('li'), img = document.createElement('img'), p = document.createElement('p');
+                img.src = ele;
+                p.innerText = arr[i+6];
+            li.append(img,p);
+            document.querySelector('.main_list').append(li)})
+    </script>
+</body>
+</html>
