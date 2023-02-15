@@ -27,7 +27,7 @@
 
 
     <script>
-        const books = [{ title: 'The Design of EveryDay Things', author: 'Don Norman', alreadyRead: false, img: './Imgs/book1.jpg'}, { title: 'The Most Human Human', author: 'Brian Christian', alreadyRead: true, img: './Imgs/book2.jpg'}];
+        const books = [{ title: 'The Design of EveryDay Things', author: 'Don Norman', alreadyRead: false, img: './book1.jpg'}, { title: 'The Most Human Human', author: 'Brian Christian', alreadyRead: true, img: './book2.jpg'}];
         for ( let i = 0; i < books.length; i++ ) {
         let li = document.createElement('li'), p = document.createElement('p'), img = document.createElement('img');
         p.innerText = `${books[i].title} written by ${books[i].author}`;
